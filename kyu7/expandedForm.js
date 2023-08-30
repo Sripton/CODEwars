@@ -45,3 +45,39 @@
 // }
 // console.log(expandedForm(number)); // 50000 6000 500 70 7 
 
+// Решение 3
+// const number = 56577;
+// const expandedForm = (num) => {
+//     const str = num.toString();
+//     let string = '';
+//     for(let i = 0; i < str.length-1; i++){
+//         const muliPly = Math.pow(10, str.length-i-1); // 10000
+//         string += +str[i] * muliPly + ' ';
+//     }
+//     return string + str.slice(-1);
+// }
+// console.log(expandedForm(number)); // 50000 6000 500 70 7
+
+// Анализ 
+// const number = 56577;
+// const expandedForm = (num) => {
+//     const str = String(num);
+//     let string = '';
+//     for(let i = 0; i < str.length-1; i++){
+//         // i = 0 
+//         const muliPly0 = Math.pow(10, str.length-i-1); // 10 ** len(5-0)-1  -> 10**4 -> 10000
+//         // i = 1
+//         const muliPly1 = Math.pow(10, str.length-i-1); // 10 ** len(5-1)-1 -> 10**3 -> 1000
+//         // i = 2
+//         const muliPly2 = Math.pow(10, str.length-i-1); // 10 ** len(5-2)-1 -> 10**2 -> 100
+//         // i = 3
+//         const muliPly3 = Math.pow(10, str.length-i-1); // 10 ** len(5-3)-1 -> 10**1 -> 10
+//         // i = 4
+//         const muliPly4 = Math.pow(10, str.length-i-1); // 10 ** len(5-4)-1 -> 10**0 -> 1
+//         const el = +str[i];
+//         string += el * muliPly + " "
+//     }
+//     return string + str.slice(-1);
+// }
+// console.log(expandedForm(number)); // 50000 6000 500 70 7
+
