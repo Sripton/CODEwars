@@ -81,3 +81,40 @@
 // }
 // console.log(expandedForm(number)); // 50000 6000 500 70 7
 
+
+// Решение 4
+// const number = 56577;
+// const expandedForm = (num) => {
+//     const str = num.toString();
+//     let multiPly = Math.pow(10, str.length -1); // 10000
+//     let result = '';
+//    for(let i = 0; i < str.length; i++){
+//     const element = +str[i];
+//     const nextElement = +str[i+1];
+//     if(element) {
+//         result += element * multiPly;
+//     }
+//     if(nextElement){
+//         result += ' ';
+//     }
+//     multiPly /= 10;
+//    }
+//    return result;
+// }
+// console.log(expandedForm(number)); // 50000 6000 500 70 7
+
+// Решение 5
+// const number = 56577;
+// const expandedForm = num => num.toString().split('')
+// .reverse()
+// .map((elem, index) => +elem * Math.pow(10, index))
+// .reverse()
+// .join(' ')
+// console.log(expandedForm(number)); // 50000 6000 500 70 7
+
+
+// Решение 6
+// const number = 56577;
+// const expandedForm = (num) => num.toString()
+// .split('').reverse().map((elem, index) => +elem * Math.pow(10, index)).sort((a,b) => b -a).join(' ')
+// console.log(expandedForm(number)); // 50000 6000 500 70 7
