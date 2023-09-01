@@ -118,3 +118,19 @@
 // const expandedForm = (num) => num.toString()
 // .split('').reverse().map((elem, index) => +elem * Math.pow(10, index)).sort((a,b) => b -a).join(' ')
 // console.log(expandedForm(number)); // 50000 6000 500 70 7
+
+// Решение 7
+// const number = 56577;
+// const expandedForm = (num) => {
+//     const numberString = ''+num;
+//     let result = '';
+//     let j = 0;
+//     for(let i = numberString.length-1; i >= 0; i--){
+//          result += numberString[j] + '0'.repeat(i) + ' ';
+//         j++;
+//     }
+//     return result
+// }
+// console.log(expandedForm(number)); // 50000 6000 500 70 7 
+
+
