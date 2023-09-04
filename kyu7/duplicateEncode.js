@@ -52,11 +52,21 @@ const helpFunction = (char) => {
     return char.toLowerCase().split('')
     .reduce((acum, elem) => {
          acum[elem] = acum[elem] ? acum[elem]  + 1 : 1;
-         return acum
+         return acum // { e: 2, l: 1, m: 1, a: 1, r: 1 }
     },{});
 }
-const duplicateEncode = (word) => {
-    let result = '';
-    return Object.keys(helpFunction());
-}
-console.log(duplicateEncode('Elmare')); 
+ let string = 'Elmare'
+ const duplicateEncode = (word) => {
+    const result = helpFunction(word);
+    return word.toLowerCase().split('')
+    .map((elem) => {
+        if(result[elem] > 1){
+            return ')'
+        }
+        else {
+            return  '('
+        }
+    }).join('')
+    
+ }
+ console.log(duplicateEncode(string)); //  )(((()
