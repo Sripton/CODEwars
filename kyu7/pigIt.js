@@ -36,24 +36,24 @@
 // console.log(pigIt('Hello world !')); // elloHay orldway !
 
 // Решение 3
-const pigIt = (item) =>  {
-  let first = [];
-  let second = [];
-  let result = '';
-  const itemMatch = item.match(/\S+/g);
-  for(let i = 0; i < itemMatch.length; i++){
-      first.push( itemMatch[i].slice(0,1));
-      second.push(itemMatch[i].slice(1));
-  }
-  for(let i = 0; i < itemMatch.length; i++){
-    if(/\W/.test(itemMatch[i])){
-      result += itemMatch[i];
-    }else {
-      result += second[i] + first[i] + 'ay '
-    }
-  }
-  return result
-}
-console.log(pigIt('Pig latin is cool')); // igPay atinlay siay oolcay 
-console.log(pigIt('Hello world !')); // elloHay orldway !
+// const pigIt = (item) =>  {
+//   let first = [];
+//   let second = [];
+//   let result = '';
+//   const itemMatch = item.match(/\S+/g);
+//   for(let i = 0; i < itemMatch.length; i++){
+//       first.push( itemMatch[i].slice(0,1));
+//       second.push(itemMatch[i].slice(1));
+//   }
+//   for(let i = 0; i < itemMatch.length; i++){
+//     if(/\W/.test(itemMatch[i])){
+//       result += itemMatch[i];
+//     }else {
+//       result += second[i] + first[i] + 'ay '
+//     }
+//   }
+//   return result
+// }
+// console.log(pigIt('Pig latin is cool')); // igPay atinlay siay oolcay 
+// console.log(pigIt('Hello world !')); // elloHay orldway !
 
